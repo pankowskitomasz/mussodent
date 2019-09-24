@@ -1,0 +1,22 @@
+/* line 1, ../sass/partials/_layout.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/partials/_layout.scss */
+body, html {
+  height: 100%;
+}
+
+/* line 8, ../sass/partials/_layout.scss */
+.section-top-fit, .index-s1 {
+  height: calc(100vh - 60px);
+  height: -o-calc(100vh - 60px);
+  height: -moz-calc(100vh - 60px);
+  height: -webkit-calc(100vh - 60px);
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.index-s2 {
+  min-height: 100vh;
+}
