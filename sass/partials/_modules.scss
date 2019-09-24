@@ -1,0 +1,175 @@
+.bg{
+    &-contain{
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+    }
+}
+.border{
+    &-bold{
+        border-width: $border-bold-size !important;
+    }
+    &-green{
+        border-color: $color-green !important;
+    }
+}
+.font{
+    &-header{
+        font-family: $font-header;
+    }
+    &-logo{
+        font-family: $font-logo;
+    }
+    &-menu{
+        font-family: $font-menu;
+    }
+    &-text{
+        font-family: $font-text;
+    }
+}
+.img{
+    &-fit{
+        height: 100% !important; 
+        object-fit: cover !important;
+        width: 100% !important;
+    }
+}
+.index{
+    &-s4__col{
+        &-left{
+            @include set-background($index-s4__col-left-bg);
+        }
+        &-right{
+            @include set-background($index-s4__col-right-bg);
+        }
+    }
+    &-s5__col{
+        &-left{
+            @include set-background($index-s5__col-left-bg-xs);
+        }
+    }
+}
+.min{
+    &-vh{
+        &-25{
+            min-height: 25vh;
+        }
+        &-50{
+            min-height: 50vh;
+        }
+    }
+}
+.navbar{
+    &-brand{
+        padding-bottom: $navbar-brand-padding-y;
+        padding-top: $navbar-brand-padding-y;
+    }
+    &-toggler{
+        border-color: $color-green !important;
+        &-icon{
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(178,239,27)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+        }
+    }
+    .nav{
+        &-item{
+            &:hover{
+                background-color: darken($color-green,15%) !important;
+            }
+            &.active{
+                background-color: lighten($color-green,35%);
+            }
+            cursor: pointer;
+        }
+        &-link{
+            &:hover{
+                color: $color-wht !important;
+            }
+            padding-bottom: $nav-link-padding-y;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: $nav-link-padding-y;
+        }
+    }
+    padding: 0px;
+}
+.opacity{
+    &-9{
+        opacity: 0.9;
+    }  
+}
+.text{
+    &-green{
+        color: $color-text-green !important;
+    }
+    &-shadow{
+        text-shadow: 0 0 4px $color-blk;
+    }
+}
+.tile{
+    &:hover{
+        img{
+            filter: blur(3px);
+        }
+        color: $color-green;
+    }
+    color: $color-wht;
+    text-decoration: none;
+}
+
+body{
+    @include fill-background($body-bg);
+}
+
+@media all and (min-width:576px){
+    .bg{
+        &-contain{
+            background-position: center top !important;
+        }
+    }
+    .index{
+        &-s5__col{
+            &-left{
+                @include set-background($index-s5__col-left-bg-sm);
+            }
+        }
+    }
+}
+
+@media all and (min-width: 768px){
+    .index{
+        &-s5__col{
+            &-left{
+                @include set-background($index-s5__col-left-bg-md);
+            }
+        }
+    }
+    .navbar{
+        .nav{
+            &-item{
+                &:hover{
+                    background-color: $color-wht !important;
+                    border-bottom: $nav-item-active-border-size $nav-item-active-border;
+                    padding-bottom: 0px;
+                }
+                &.active{
+                    background-color: $color-wht;
+                }
+                cursor: pointer;
+                padding-bottom: $nav-item-active-border-size;
+                padding-left: 0px;
+                padding-right: 0px;
+
+            }
+            &-link{
+                &:hover{
+                    color: $color-green !important;
+                }
+                padding-bottom: $nav-link-padding-y;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: $nav-link-padding-y;
+            }
+        }
+        padding: 0px;
+    }
+}

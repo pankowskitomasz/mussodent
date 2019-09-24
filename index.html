@@ -11,67 +11,513 @@
         <link rel="stylesheet"
             type="text/css"
             href="css/styles.min.css">
+        <link rel="stylesheet"
+            type="text/css"
+            href="css/font-awesome.min.css">
         <title>Musso Dental</title>
     </head>
-    <body>
-        <nav class="navbar navbar-light navbar-expand-md bg-white">
+    <body class="font-text text-muted">
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom border-secondary shadow">
             <a href="index.html"
-                class="navbar-brand">
+                class="navbar-brand mx-3 mx-md-3">
                 <img src="img/logo.png"
                     alt="logo">
+                <span class="d-none d-sm-inline font-logo m-2 text-green">Musso Dental</span>
             </a>
-            <button class="navbar-toggler"
+            <button class="navbar-toggler mx-3 mx-md-3"
                 data-target="#main-nav"
                 data-toggle="collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" 
                 id="main-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                <ul class="navbar-nav ml-auto font-menu">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link text-green">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
+                        <a href="about.html" class="nav-link text-green">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="services.html" class="nav-link text-green">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="contact.html" class="nav-link text-green">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
-                            <span class="fa fa-user"></span>
+                        <a href="user.php" class="nav-link text-green">
+                            <span class="fa fa-user-circle-o"></span>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <section class="container index-s1 bg-secondary">
-
-        </section>
-        <section class="container index-s2">
-
-        </section>
-        <footer class="container-fluid bg-dark px-3 pt-2">
-            <div class="row">
-                <div class="col-12 col-md-4">
-
-                </div>
-                <div class="col-12 col-md-4">
-                    
-                </div>
-                <div class="col-12 col-md-4">
-                    
+        <section class="container-fluid index-s1 section-top-fit bg-secondary">
+            <div class="row section-top-fit">
+                <div class="carousel slide w-100 h-100" 
+                    data-ride="carousel" 
+                    id="index-s1__carousel">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item h-100 active">
+                            <picture>
+                                <source media="(min-width: 992px)" data-src="img/index-s1/slide-1-lg.jpg">
+                                <source media="(min-width: 768px)" data-src="img/index-s1/slide-1-md.jpg">
+                                <source media="(min-width: 576px)" data-src="img/index-s1/slide-1-sm.jpg">
+                                <img alt="slide"
+                                    class="img-fit"
+                                    src="img/index-s1/slide-1-xs.jpg">
+                            </picture>
+                            <div class="carousel-caption text-shadow">
+                                <img src="img/logo.png"
+                                    alt="logo">
+                                <h3 class="font-logo m-2 text-green">
+                                    Musso Dental
+                                </h3>
+                                <h4 class="font-header text-white text-uppercase">
+                                    Professional dentistry services
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <picture>
+                                <source media="(min-width: 992px)" data-src="img/index-s1/slide-2-lg.jpg">
+                                <source media="(min-width: 768px)" data-src="img/index-s1/slide-2-md.jpg">
+                                <source media="(min-width: 576px)" data-src="img/index-s1/slide-2-sm.jpg">
+                                <img alt="slide"
+                                    class="img-fit"
+                                    src="img/index-s1/slide-2-xs.jpg">
+                            </picture>
+                            <div class="carousel-caption text-shadow">
+                                <img src="img/logo.png"
+                                    alt="logo">
+                                <h3 class="font-logo m-2 text-green">
+                                    Musso Dental
+                                </h3>
+                                <h3 class="font-header text-white text-uppercase">
+                                    Comprehensive care
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <picture>
+                                <source media="(min-width: 992px)" data-src="img/index-s1/slide-3-lg.jpg">
+                                <source media="(min-width: 768px)" data-src="img/index-s1/slide-3-md.jpg">
+                                <source media="(min-width: 576px)" data-src="img/index-s1/slide-3-sm.jpg">
+                                <img alt="slide"
+                                    class="img-fit"
+                                    src="img/index-s1/slide-3-xs.jpg">
+                            </picture>
+                            <div class="carousel-caption text-shadow">
+                                <img src="img/logo.png"
+                                    alt="logo">
+                                <h3 class="font-logo m-2 text-green">
+                                    Musso Dental
+                                </h3>
+                                <h3 class="font-header text-white text-uppercase">
+                                    Healty smile is our mission
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row mx-2 pt-1 border-top border-light">
-                <p class="text-center text-white w-100">
-                    Website demo, Copyright &copy; 2019
-                </p>
+        </section>
+        <section class="container index-s2 d-flex py-3">
+            <div class="my-auto text-center text-md-left px-md-5">
+                <div class="row m-3 border-bold border-bottom border-green border-top">
+                    <h3 class="font-header mx-auto my-0 text-green text-uppercase">
+                        Cosmetic and family dentistry
+                    </h3>
+                </div>
+                <div class="row m-3 pt-3">
+                    <p class="initialism">
+                        Your top-rated dental practice
+                    </p>
+                    <p>
+                        At MussoDent we take the time to help our patients enjoy their dental 
+                        visits. From when you arrive to when you leave, our staff will help 
+                        you enjoy your visit. Our stylish practice also has an urban loft feel 
+                        that we think you'll love. 
+                    </p>
+                    <p>
+                        When you first walk in, you are given an Ipad for efficient, accurate 
+                        and confidential gathering of information. We strive to have the best 
+                        equipment and latest technology dentistry has to offer. This allows 
+                        our team to not only communicate dental needs with our patients, but 
+                        to also provide dentistry in the most efficient and comfortable way 
+                        possible.
+                    </p>
+                    <p>
+                        Combine this with an amazingly friendly staff and you can see why 
+                        so many people love our team. We are both appreciative and grateful 
+                        for the hundreds of five star reviews our current patients have shared. 
+                        With views overlooking Market Street Square, we provide a unique 
+                        and relaxing environment for your entire family.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="container index-s3 d-flex py-3">
+            <div class="my-auto text-center text-md-left px-md-5">
+                <div class="row m-3 border-bold border-bottom border-green border-top">
+                    <h3 class="font-header mx-auto my-0 text-green text-uppercase">
+                        Dentistry for the entire family
+                    </h3>
+                </div>
+                <div class="row m-3 pt-3">
+                    <p class="initialism">
+                        From customized cleanings to cosmetics, we can help.
+                    </p>
+                    <p>
+                        Our team can handle the dental needs of your entire family. Do you need 
+                        a dentist that can help you or your children overcome dental anxiety? 
+                    </p>
+                    <p>
+                        We want each child to have a positive dental experience in our office 
+                        so they can foster a fearless relationship with dentistry throughout 
+                        their life. Do you have a complicated dental procedure you need resolved?
+                    </p>
+                    <p> 
+                        With the latest dental technologies at our location and a team of dentists 
+                        experienced in complex dental procedures, our team will help you understand 
+                        the different options available to you for the best results. Dr. Musso 
+                        and her team can help you and your family achieve a healthy and beautiful 
+                        smile.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid index-s4 p-0 border-bottom border-top border-light bg-light shadow">
+            <div class="row text-center text-sm-left m-0">
+                <div class="col-12 col-md-6 index-s4__col-left min-vh-50"></div>
+                <div class="col-12 col-md-6 d-flex">
+                    <div class="my-auto p-4">
+                        <h3  class="font-header mx-auto my-0 text-center text-green text-uppercase pb-3">
+                            Experience the difference
+                        </h3> 
+                        <p>
+                            Every new patient will experience our comprehensive dental exam. This 
+                            includes a detailed cleaning, oral cancer screening, and intraoral digital 
+                            photos will be taken so you can clearly see any dental problems. With our 
+                            digital intraoral photography, you will be able to view your teeth and any 
+                            concerns you have on our large flat screen monitors equipped in each room. 
+                        </p>
+                        <p>
+                            Educating our patients is of utmost importance; as the patient, you will 
+                            always select the treatment recommendation you prefer. We promise our 
+                            thorough evaluation will exceed your expectations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center text-sm-left m-0">
+                <div class="col-12 col-md-6 index-s4__col-right min-vh-50 order-0 order-md-1"></div>
+                <div class="col-12 col-md-6 order-1 order-md-0 d-flex">
+                    <div class="my-auto p-4">
+                        <h3  class="font-header mx-auto my-0 text-center text-green text-uppercase pb-3">
+                            Comprehensive care
+                        </h3> 
+                        <p>
+                            With our doctors' extensive training, we provide most dental procedures right 
+                            here in our office. From dental implants, root canals, wisdom tooth extractions, 
+                            and more, our surgical dentists can often complete these procedures in one 
+                            appointment for the convenience of our patients. 
+                        </p>
+                        <p>
+                            From having your crown completed in one day with our CEREC system to providing 
+                            specialized services such as all levels of sedation dentistry, our broad range 
+                            of in-house services mean you don't have to worry about being referred elsewhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container index-s5 d-flex py-3 d-flex">
+            <div class="my-auto text-center text-md-left px-md-5 w-100">
+                <div class="row py-3">
+                    <div class="col-12 col-sm-3 index-s5__col-left bg-contain min-vh-25"></div>
+                    <div class="col-12 col-sm-9">
+                        <div class="row m-3 border-bold border-bottom border-green border-top">
+                            <h3 class="font-header mx-auto my-0 text-green text-uppercase">
+                                Dr. Musso
+                            </h3>
+                        </div>
+                        <div class="row m-3">
+                            <p>
+                                Dr. Musso offers advanced restorative and cosmetic procedures that require 
+                                a team that is highly trained with extensive experience and a unique skill 
+                                set. Her office offers superior customer service and the latest in modern 
+                                technology. 
+                            </p>    
+                            <p>
+                                We are honored to offer exceptional dental care and beautiful healthy smiles 
+                                for the entire family. From preventive care for children to being able 
+                                to handle the most complex dental procedures.
+                            </p>
+                            <p>
+                                Dr. Musso is committed to focusing on each patients specific needs. She has 
+                                a passion for learning and makes it a priority to invest in the best continuing 
+                                education courses in the country, completing hundreds of hours and advanced 
+                                continuing education classes from the most prestigious dental programs in the 
+                                country.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container index-s6 d-flex py-3 d-flex">
+            <div class="my-auto mx-auto">
+                <div class="row border-bottom border-top border-secondary pt-4 font-header text-center text-shadow">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="services/prevention-dentistry.html"
+                            class="tile">
+                            <div class="card mb-4">
+                                <img class="card-img"
+                                    src="img/index-s6/tile-1.jpg"
+                                    alt="tile">
+                                <div class="card-img-overlay d-flex">
+                                    <h4 class=" mx-auto my-auto font-weight-bold">
+                                        Preventive<br/> Dentistry
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="services/cosmetic-dentistry.html"
+                            class="tile">
+                            <div class="card mb-4">
+                                <img class="card-img"
+                                    src="img/index-s6/tile-2.jpg"
+                                    alt="tile">
+                                <div class="card-img-overlay d-flex">
+                                    <h4 class="mx-auto my-auto font-weight-bold">
+                                        Cosmetic<br/> Dentistry
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="services/restorative-dentistry.html"
+                            class="tile">
+                            <div class="card mb-4">
+                                <img class="card-img"
+                                    src="img/index-s6/tile-3.jpg"
+                                    alt="tile">
+                                <div class="card-img-overlay d-flex">
+                                    <h4 class="mx-auto my-auto font-weight-bold">
+                                        Restorative<br/> Dentistry
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="services/sedative-dentistry.html"
+                            class="tile">
+                            <div class="card mb-4">
+                                <img class="card-img"
+                                    src="img/index-s6/tile-4.jpg"
+                                    alt="tile">
+                                <div class="card-img-overlay d-flex">
+                                    <h4 class="mx-auto my-auto font-weight-bold">
+                                        Sedative<br/> Dentistry
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="services/surgical-devices.html"
+                            class="tile">
+                            <div class="card mb-4">
+                                <img class="card-img"
+                                    src="img/index-s6/tile-5.jpg"
+                                    alt="tile">
+                                <div class="card-img-overlay d-flex">
+                                    <h4 class="mx-auto my-auto font-weight-bold">
+                                        Surgical<br/> Devices
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="services/diagnostic-technologies.html"
+                            class="tile">
+                            <div class="card mb-4">
+                                <img class="card-img"
+                                    src="img/index-s6/tile-6.jpg"
+                                    alt="tile">
+                                <div class="card-img-overlay d-flex">
+                                    <h4 class="mx-auto my-auto font-weight-bold">
+                                        Diagnostic<br/> Technologies
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container index-s7 d-flex py-3">
+            <div class="my-auto text-center text-md-left px-md-5">
+                <div class="row m-3 border-bold border-bottom border-green border-top">
+                    <h3 class="font-header mx-auto my-0 text-green text-uppercase">
+                        Schedule an appointment
+                    </h3>
+                </div>
+                <div class="row m-3 pt-3">
+                    <p class="initialism w-100">
+                        Dentistry with a personal touch
+                    </p>
+                    <p>
+                        If you have any questions for us, please give us a call and our friendly 
+                        staff will be happy to help. Whether you live in The Woodland, Benders 
+                        Landing in the Spring area, Woodforest in Conroe, or the surrounding 
+                        North Houston area, Dr. Musso and her team would love to welcome you 
+                        to our practice.                        
+                    </p>
+                </div>
+                <div class="row m-3">
+                    <div class="col-12 col-sm-7 text-left">
+                        <p>
+                            Contact with us by phone:
+                        </p>
+                        <ul class="list-unstyled border-left border-bold border-green pl-3">
+                            <li class="pb-2">
+                                <span class="font-weight-bold text-green">
+                                    Tel.:
+                                </span> 
+                                123 - 456 -678
+                            </li>
+                            <li class="pb-2">
+                                <span class="font-weight-bold text-green">
+                                    Fax:
+                                </span>
+                                123 - 456 -789
+                            </li>
+                            <li>
+                                <span class="font-weight-bold text-green">
+                                    Email:
+                                </span>
+                                musso&#64;mail.com
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-5 text-center">
+                        <p>
+                            Contact with us online:
+                        </p>
+                        <a href="contact.html"
+                            class="btn btn-outline-secondary mx-auto">
+                            Contact us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="container-fluid border-top border-secondary bg-light shadow-lg px-3 pt-2">
+            <div class="row text-center text-md-left py-2">
+                <div class="col-12 col-sm-6 col-md-4 pb-2">
+                    <h4 class="font-weight-bold text-green">Contact</h4>
+                    <ul class="list-unstyled pl-3">
+                        <li class="pb-2">Tel.: 123 - 456 -678</li>
+                        <li class="pb-2">Fax: 123 - 456 -789</li>
+                        <li>Email: musso&#64;mail.com</li>
+                    </ul>                    
+                </div>
+                <div class="col-12  col-sm-6 col-md-4 pb-2">
+                    <h4 class="font-weight-bold text-green">Location</h4>
+                    <ul class="list-unstyled pl-3">
+                        <li class="pb-2">Kate Musso, DDS</li>
+                        <li class="pb-2">1234 Pine Str.</li>
+                        <li>Woodland, TX</li>
+                    </ul>
+                </div>
+                <div class="col-12  col-sm-12 col-md-4 pb-2">
+                    <h4 class="font-weight-bold text-green">Hours</h4>
+                    <div class="row">
+                        <div class="col-6 col-md-4 text-right">
+                            <ul class="list-unstyled">
+                                <li>MON</li>
+                                <li>TUE</li>
+                                <li>WED</li>
+                                <li>THU</li>
+                                <li>FRI</li>
+                                <li>SAT</li>
+                                <li>SUN</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-8 border-left border-green text-left ">
+                            <ul class="list-unstyled">
+                                <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
+                                <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
+                                <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
+                                <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
+                                <li>7:00 <sub>AM</sub> - 2:00 <sub>PM</sub></li>
+                                <li>CLOSED</li>
+                                <li>CLOSED</li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="row mx-2 pt-1 border-top border-secondary">
+                <div class="col-12 col-md-6 order-0 order-md-1 text-center text-md-right">
+                        <a href="privacy.html"
+                            class="font-header text-green font-weight-bold">
+                            Privacy &amp; Cookies
+                        </a>
+                </div>
+                <div class="col-12 col-md-6 order-1 order-md-0">
+                    <p class="text-center text-md-left w-100">
+                        Website demo, Copyright &copy; 2019
+                    </p>
+                </div>
             </div>
         </footer>
+        <div class="modal" id="privacyModal">
+            <div class="modal-dialog font-header">
+                <div class="modal-content border-green p-2">
+                    <div class="modal-header text-center">
+                        <h4 class="font-header text-green font-weight-bold">GPDR Declaration</h4>
+                        <a href="#privacyModal" 
+                            data-target="#privacyModal"
+                            data-dismiss="modal"
+                            class="close text-green">
+                            &times;
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p class="initialism">
+                            This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
+                            in long term meaning (longer than needed for website operation during visitor's
+                            presence), any user (visitor) data.
+                        </p>
+                        <p class="initialism pt-2">
+                            All information collected during visitor's 
+                            presence on this website is used only for technical purposes, required for 
+                            correct operation of website or demonstration purposes related to technical 
+                            mechanisms and presentation of its operation... 
+                            <a href="privacy.html" class="text-green font-weight-bold">More about privacy</a>
+                        </p>                        
+                        <p class="initialism pt-2">
+                            If you accept privacy policy please click button "accept". If you 
+                            refuse it, leave page by closing it in your web browser, please.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-dark mx-auto"
+                            onclick="acceptPrivacyPolicy()">
+                            Accept
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>  
         <script type="text/javascript"
             src="js/main.min.js">
         </script>

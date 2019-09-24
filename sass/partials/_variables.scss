@@ -1,6 +1,33 @@
+$body-bg: "../img/body-bg.jpg";
+$border-bold-size: 3px;
+$color-blk: #222;
+$color-green: rgb(178,239,27);
+$color-text-green: darken($color-green,10%);
+$color-wht: #fff;
+$font-header: 'Exo 2';
+$font-logo: 'Lobster';
+$font-menu: $font-header;
+$font-text: 'Comfortaa';
 $full-height: 100vh;
+$half-height: 50vh;
+$index-s4__col-left-bg: "../img/index-s4/index-s4-left-bg.jpg";
+$index-s4__col-right-bg: "../img/index-s4/index-s4-right-bg.jpg";
+$index-s5__col-left-bg-xs: "../img/index-s5/index-s5-left-bg-xs.png";
+$index-s5__col-left-bg-sm: "../img/index-s5/index-s5-left-bg-sm.png";
+$index-s5__col-left-bg-md: "../img/index-s5/index-s5-left-bg-md.png";
+$nav-item-active-border: solid $color-green;
+$nav-item-active-border-size: 3px;
+$nav-link-padding-y: 18px;
+$navbar-brand-padding-y: 10px;
 $navbar-height: 60px;
+$navbar-padding: 0px;
 $section-full-height:
-    "index-s2";
+    "index-s4";
+$section-half-height:
+    "index-s2",
+    "index-s3",
+    "index-s5"
+    "index-s6";
 $section-top-height:
     "index-s1";
+

@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 body,html{
     height: 100%;
@@ -11,3 +11,4 @@ body,html{
 
 @include include-class($section-top-height,".section-top-fit");
 @include set-height($section-full-height,$full-height);
+@include set-height($section-half-height,$half-height);
