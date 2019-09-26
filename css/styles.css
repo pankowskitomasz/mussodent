@@ -1,0 +1,712 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDr4fIA9c.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDrcfIA9c.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDrAfIA9c.woff2) format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDrwfIA9c.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDr0fIA9c.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDrMfIA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Exo 2 Regular"), local("Exo2-Regular"), url(../fonts/7cHmv4okm5zmbtYlK-4E4Q.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Exo 2 Regular"), local("Exo2-Regular"), url(../fonts/7cHmv4okm5zmbtYsK-4E4Q.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Exo 2 Regular"), local("Exo2-Regular"), url(../fonts/7cHmv4okm5zmbtYnK-4E4Q.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Exo 2 Regular"), local("Exo2-Regular"), url(../fonts/7cHmv4okm5zmbtYmK-4E4Q.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Exo 2 Regular"), local("Exo2-Regular"), url(../fonts/7cHmv4okm5zmbtYoK-4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lobster Regular"), local("Lobster-Regular"), url(../fonts/neILzCirqoswsqX9zo-mM5Ez.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lobster Regular"), local("Lobster-Regular"), url(../fonts/neILzCirqoswsqX9zoamM5Ez.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lobster Regular"), local("Lobster-Regular"), url(../fonts/neILzCirqoswsqX9zo2mM5Ez.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lobster Regular"), local("Lobster-Regular"), url(../fonts/neILzCirqoswsqX9zoymM5Ez.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lobster Regular"), local("Lobster-Regular"), url(../fonts/neILzCirqoswsqX9zoKmMw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* line 1, ../sass/partials/_layout.scss */
+* {
+  box-sizing: border-box !important;
+}
+
+/* line 4, ../sass/partials/_layout.scss */
+body, html {
+  height: 100%;
+}
+
+/* line 8, ../sass/partials/_layout.scss */
+.section-top-fit, .error-s1, .index-s1, .user-s1 {
+  height: calc(100vh - 60px);
+  height: -o-calc(100vh - 60px);
+  height: -moz-calc(100vh - 60px);
+  height: -webkit-calc(100vh - 60px);
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.about-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.contact-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.cosmetic-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.diagnostic-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.index-s4 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.prevention-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.privacy-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.sedative-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.services-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.surgical-s1 {
+  min-height: 100vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.index-s2 {
+  min-height: 50vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.index-s3 {
+  min-height: 50vh;
+}
+
+/* line 29, ../sass/partials/_mixins.scss */
+.index-s5 index-s6 {
+  min-height: 50vh;
+}
+
+/* line 3, ../sass/partials/_modules.scss */
+.about-s1__r1-col-left {
+  background-image: url(../img/index-s5/index-s5-left-bg-xs.png);
+  background-position: left center;
+  background-size: cover;
+}
+/* line 8, ../sass/partials/_modules.scss */
+.about-s1__r2-col-left {
+  background-image: url(../img/about-s1/about-s1-r2-left-bg-xs.png);
+  background-position: left center;
+  background-size: cover;
+}
+/* line 13, ../sass/partials/_modules.scss */
+.about-s1__r3-col-left {
+  background-image: url(../img/about-s1/about-s1-r3-left-bg-xs.png);
+  background-position: left center;
+  background-size: cover;
+}
+/* line 18, ../sass/partials/_modules.scss */
+.about-s1__r4-col-left {
+  background-image: url(../img/about-s1/about-s1-r4-left-bg-xs.png);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 24, ../sass/partials/_modules.scss */
+.bg-contain {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+/* line 31, ../sass/partials/_modules.scss */
+.border-bold {
+  border-width: 3px !important;
+}
+/* line 34, ../sass/partials/_modules.scss */
+.border-green {
+  border-color: #b2ef1b !important;
+}
+
+/* line 39, ../sass/partials/_modules.scss */
+.cosmetic-s1 {
+  background-image: url(../img/cosmetic-s1/cosmetic-s1-bg-xs.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 44, ../sass/partials/_modules.scss */
+.diagnostic-s1 {
+  background-image: url(../img/diagnostic-s1/diagnostic-s1-bg-xs.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 49, ../sass/partials/_modules.scss */
+.font-header {
+  font-family: "Exo 2";
+}
+/* line 52, ../sass/partials/_modules.scss */
+.font-logo {
+  font-family: "Lobster";
+}
+/* line 55, ../sass/partials/_modules.scss */
+.font-menu {
+  font-family: "Exo 2";
+}
+/* line 58, ../sass/partials/_modules.scss */
+.font-text {
+  font-family: "Comfortaa";
+}
+
+/* line 63, ../sass/partials/_modules.scss */
+.img-fit {
+  height: 100% !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+/* line 71, ../sass/partials/_modules.scss */
+.index-s4__col-left {
+  background-image: url(../img/index-s4/index-s4-left-bg.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+/* line 74, ../sass/partials/_modules.scss */
+.index-s4__col-right {
+  background-image: url(../img/index-s4/index-s4-right-bg.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+/* line 79, ../sass/partials/_modules.scss */
+.index-s5__col-left {
+  background-image: url(../img/index-s5/index-s5-left-bg-xs.png);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 84, ../sass/partials/_modules.scss */
+.input-transparent {
+  background-color: transparent;
+  border-width: 0;
+}
+
+/* line 90, ../sass/partials/_modules.scss */
+.min-vh-25 {
+  min-height: 25vh;
+}
+/* line 93, ../sass/partials/_modules.scss */
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+/* line 98, ../sass/partials/_modules.scss */
+.navbar {
+  padding: 0px;
+}
+/* line 99, ../sass/partials/_modules.scss */
+.navbar-brand {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+/* line 103, ../sass/partials/_modules.scss */
+.navbar-toggler {
+  border-color: #b2ef1b !important;
+}
+/* line 105, ../sass/partials/_modules.scss */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(178,239,27)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+/* line 110, ../sass/partials/_modules.scss */
+.navbar .nav-item {
+  cursor: pointer;
+}
+/* line 111, ../sass/partials/_modules.scss */
+.navbar .nav-item:hover {
+  background-color: #82b10c !important;
+}
+/* line 114, ../sass/partials/_modules.scss */
+.navbar .nav-item.active {
+  background-color: #eafbc2;
+}
+/* line 119, ../sass/partials/_modules.scss */
+.navbar .nav-link {
+  padding-bottom: 18px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 18px;
+}
+/* line 120, ../sass/partials/_modules.scss */
+.navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+/* line 132, ../sass/partials/_modules.scss */
+.opacity-7 {
+  opacity: 0.7;
+}
+/* line 135, ../sass/partials/_modules.scss */
+.opacity-8 {
+  opacity: 0.8;
+}
+/* line 138, ../sass/partials/_modules.scss */
+.opacity-9 {
+  opacity: 0.9;
+}
+
+/* line 143, ../sass/partials/_modules.scss */
+.prevention-s1 {
+  background-image: url(../img/prevention-s1/prevention-s1-bg-xs.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 148, ../sass/partials/_modules.scss */
+.restorative-s1 {
+  background-image: url(../img/restorative-s1/restorative-s1-bg-xs.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 153, ../sass/partials/_modules.scss */
+.sedative-s1 {
+  background-image: url(../img/services-s1/services-s1-bg-xs.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 158, ../sass/partials/_modules.scss */
+.services-s1 {
+  background-image: url(../img/services-s1/services-s1-bg-xs.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 163, ../sass/partials/_modules.scss */
+.surgical-s1 {
+  background-image: url(../img/surgical-s1/surgical-s1-bg-xs.jpg);
+  background-position: left center;
+  background-size: cover;
+}
+
+/* line 168, ../sass/partials/_modules.scss */
+.text-green {
+  color: #93c90e !important;
+}
+/* line 171, ../sass/partials/_modules.scss */
+.text-shadow {
+  text-shadow: 0 0 4px #222;
+}
+
+/* line 176, ../sass/partials/_modules.scss */
+.textarea {
+  height: 150px !important;
+  resize: none;
+}
+
+/* line 181, ../sass/partials/_modules.scss */
+.tile {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 182, ../sass/partials/_modules.scss */
+.tile:hover {
+  color: #b2ef1b;
+}
+/* line 183, ../sass/partials/_modules.scss */
+.tile:hover img {
+  filter: blur(3px);
+}
+
+/* line 192, ../sass/partials/_modules.scss */
+body {
+  background-image: url(../img/body-bg.jpg);
+  background-repeat: repeat;
+}
+
+@media all and (min-width: 576px) {
+  /* line 199, ../sass/partials/_modules.scss */
+  .about-s1__r1-col-left {
+    background-image: url(../img/index-s5/index-s5-left-bg-sm.png);
+    background-position: left center;
+    background-size: cover;
+  }
+  /* line 204, ../sass/partials/_modules.scss */
+  .about-s1__r2-col-left {
+    background-image: url(../img/about-s1/about-s1-r2-left-bg-sm.png);
+    background-position: left center;
+    background-size: cover;
+  }
+  /* line 209, ../sass/partials/_modules.scss */
+  .about-s1__r3-col-left {
+    background-image: url(../img/about-s1/about-s1-r3-left-bg-sm.png);
+    background-position: left center;
+    background-size: cover;
+  }
+  /* line 214, ../sass/partials/_modules.scss */
+  .about-s1__r4-col-left {
+    background-image: url(../img/about-s1/about-s1-r4-left-bg-sm.png);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 220, ../sass/partials/_modules.scss */
+  .bg-contain {
+    background-position: center top !important;
+  }
+
+  /* line 225, ../sass/partials/_modules.scss */
+  .cosmetic-s1 {
+    background-image: url(../img/cosmetic-s1/cosmetic-s1-bg-sm.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 230, ../sass/partials/_modules.scss */
+  .diagnostic-s1 {
+    background-image: url(../img/diagnostic-s1/diagnostic-s1-bg-sm.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 236, ../sass/partials/_modules.scss */
+  .index-s5__col-left {
+    background-image: url(../img/index-s5/index-s5-left-bg-sm.png);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 242, ../sass/partials/_modules.scss */
+  .prevention-s1 {
+    background-image: url(../img/prevention-s1/prevention-s1-bg-sm.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 247, ../sass/partials/_modules.scss */
+  .restorative-s1 {
+    background-image: url(../img/restorative-s1/restorative-s1-bg-sm.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 252, ../sass/partials/_modules.scss */
+  .sedative-s1 {
+    background-image: url(../img/sedative-s1/sedative-s1-bg-sm.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 257, ../sass/partials/_modules.scss */
+  .services-s1 {
+    background-image: url(../img/services-s1/services-s1-bg-sm.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 262, ../sass/partials/_modules.scss */
+  .surgical-s1 {
+    background-image: url(../img/surgical-s1/surgical-s1-bg-sm.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+}
+@media all and (min-width: 768px) {
+  /* line 271, ../sass/partials/_modules.scss */
+  .about-s1__r1-col-left {
+    background-image: url(../img/index-s5/index-s5-left-bg-md.png);
+    background-position: left center;
+    background-size: cover;
+  }
+  /* line 276, ../sass/partials/_modules.scss */
+  .about-s1__r2-col-left {
+    background-image: url(../img/about-s1/about-s1-r2-left-bg-md.png);
+    background-position: left center;
+    background-size: cover;
+  }
+  /* line 281, ../sass/partials/_modules.scss */
+  .about-s1__r3-col-left {
+    background-image: url(../img/about-s1/about-s1-r3-left-bg-md.png);
+    background-position: left center;
+    background-size: cover;
+  }
+  /* line 286, ../sass/partials/_modules.scss */
+  .about-s1__r4-col-left {
+    background-image: url(../img/about-s1/about-s1-r4-left-bg-md.png);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 292, ../sass/partials/_modules.scss */
+  .cosmetic-s1 {
+    background-image: url(../img/cosmetic-s1/cosmetic-s1-bg-md.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 297, ../sass/partials/_modules.scss */
+  .diagnostic-s1 {
+    background-image: url(../img/diagnostic-s1/diagnostic-s1-bg-md.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 303, ../sass/partials/_modules.scss */
+  .index-s5__col-left {
+    background-image: url(../img/index-s5/index-s5-left-bg-md.png);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 308, ../sass/partials/_modules.scss */
+  .navbar {
+    padding: 0px;
+  }
+  /* line 310, ../sass/partials/_modules.scss */
+  .navbar .nav-item {
+    cursor: pointer;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  /* line 311, ../sass/partials/_modules.scss */
+  .navbar .nav-item:hover, .navbar .nav-item.active {
+    background-color: #fff !important;
+    border-bottom: 3px solid #b2ef1b;
+    padding-bottom: 0px;
+  }
+  /* line 322, ../sass/partials/_modules.scss */
+  .navbar .nav-link {
+    padding-bottom: 18px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 18px;
+  }
+  /* line 323, ../sass/partials/_modules.scss */
+  .navbar .nav-link:hover {
+    color: #b2ef1b !important;
+  }
+
+  /* line 335, ../sass/partials/_modules.scss */
+  .prevention-s1 {
+    background-image: url(../img/prevention-s1/prevention-s1-bg-md.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 340, ../sass/partials/_modules.scss */
+  .restorative-s1 {
+    background-image: url(../img/restorative-s1/restorative-s1-bg-md.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 345, ../sass/partials/_modules.scss */
+  .sedative-s1 {
+    background-image: url(../img/sedative-s1/sedative-s1-bg-md.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 350, ../sass/partials/_modules.scss */
+  .services-s1 {
+    background-image: url(../img/services-s1/services-s1-bg-md.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 355, ../sass/partials/_modules.scss */
+  .surgical-s1 {
+    background-image: url(../img/surgical-s1/surgical-s1-bg-md.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+}
+@media all and (min-width: 992px) {
+  /* line 363, ../sass/partials/_modules.scss */
+  .cosmetic-s1 {
+    background-image: url(../img/cosmetic-s1/cosmetic-s1-bg-lg.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 368, ../sass/partials/_modules.scss */
+  .diagnostic-s1 {
+    background-image: url(../img/diagnostic-s1/diagnostic-s1-bg-lg.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 373, ../sass/partials/_modules.scss */
+  .prevention-s1 {
+    background-image: url(../img/prevention-s1/prevention-s1-bg-lg.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 378, ../sass/partials/_modules.scss */
+  .restorative-s1 {
+    background-image: url(../img/restorative-s1/restorative-s1-bg-lg.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 383, ../sass/partials/_modules.scss */
+  .sedative-s1 {
+    background-image: url(../img/sedative-s1/sedative-s1-bg-lg.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 388, ../sass/partials/_modules.scss */
+  .services-s1 {
+    background-image: url(../img/services-s1/services-s1-bg-lg.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+
+  /* line 393, ../sass/partials/_modules.scss */
+  .surgical-s1 {
+    background-image: url(../img/surgical-s1/surgical-s1-bg-lg.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+}
