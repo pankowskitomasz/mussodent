@@ -1,3 +1,25 @@
+.about{
+    &-s1__r1-col{
+        &-left{
+            @include set-background($about-s1__r1-col-left-bg-xs);
+        }
+    }
+    &-s1__r2-col{
+        &-left{
+            @include set-background($about-s1__r2-col-left-bg-xs);
+        }
+    }
+    &-s1__r3-col{
+        &-left{
+            @include set-background($about-s1__r3-col-left-bg-xs);
+        }
+    }
+    &-s1__r4-col{
+        &-left{
+            @include set-background($about-s1__r4-col-left-bg-xs);
+        }
+    }
+}
 .bg{
     &-contain{
         background-position: center center !important;
@@ -11,6 +33,16 @@
     }
     &-green{
         border-color: $color-green !important;
+    }
+}
+.cosmetic{
+    &-s1{
+        @include set-background($cosmetic-s1-bg-xs);
+    }
+}
+.diagnostic{
+    &-s1{
+        @include set-background($diagnostic-s1-bg-xs);
     }
 }
 .font{
@@ -48,6 +80,10 @@
             @include set-background($index-s5__col-left-bg-xs);
         }
     }
+}
+.input-transparent{
+    background-color: transparent;
+    border-width: 0;
 }
 .min{
     &-vh{
@@ -93,9 +129,40 @@
     padding: 0px;
 }
 .opacity{
+    &-7{
+        opacity: 0.7;
+    }
+    &-8{
+        opacity: 0.8;
+    } 
     &-9{
         opacity: 0.9;
     }  
+}
+.prevention{
+    &-s1{
+        @include set-background($prevention-s1-bg-xs);
+    }
+}
+.restorative{
+    &-s1{
+        @include set-background($restorative-s1-bg-xs);
+    }
+}
+.sedative{
+    &-s1{
+        @include set-background($services-s1-bg-xs);
+    }
+}
+.services{
+    &-s1{
+        @include set-background($services-s1-bg-xs);
+    }
+}
+.surgical{
+    &-s1{
+        @include set-background($surgical-s1-bg-xs);
+    }
 }
 .text{
     &-green{
@@ -105,6 +172,12 @@
         text-shadow: 0 0 4px $color-blk;
     }
 }
+
+.textarea{
+    height: 150px !important;
+    resize: none;
+}
+
 .tile{
     &:hover{
         img{
@@ -121,9 +194,41 @@ body{
 }
 
 @media all and (min-width:576px){
+    .about{
+        &-s1__r1-col{
+            &-left{
+                @include set-background($about-s1__r1-col-left-bg-sm);
+            }
+        }
+        &-s1__r2-col{
+            &-left{
+                @include set-background($about-s1__r2-col-left-bg-sm);
+            }
+        }
+        &-s1__r3-col{
+            &-left{
+                @include set-background($about-s1__r3-col-left-bg-sm);
+            }
+        }
+        &-s1__r4-col{
+            &-left{
+                @include set-background($about-s1__r4-col-left-bg-sm);
+            }
+        }
+    }
     .bg{
         &-contain{
             background-position: center top !important;
+        }
+    }
+    .cosmetic{
+        &-s1{
+            @include set-background($cosmetic-s1-bg-sm);
+        }
+    }
+    .diagnostic{
+        &-s1{
+            @include set-background($diagnostic-s1-bg-sm);
         }
     }
     .index{
@@ -133,9 +238,66 @@ body{
             }
         }
     }
+    .prevention{
+        &-s1{
+            @include set-background($prevention-s1-bg-sm);
+        }
+    }
+    .restorative{
+        &-s1{
+            @include set-background($restorative-s1-bg-sm);
+        }
+    }
+    .sedative{
+        &-s1{
+            @include set-background($sedative-s1-bg-sm);
+        }
+    }
+    .services{
+        &-s1{
+            @include set-background($services-s1-bg-sm);
+        }
+    }
+    .surgical{
+        &-s1{
+            @include set-background($surgical-s1-bg-sm);
+        }
+    }
 }
 
 @media all and (min-width: 768px){
+    .about{
+        &-s1__r1-col{
+            &-left{
+                @include set-background($about-s1__r1-col-left-bg-md);
+            }
+        }
+        &-s1__r2-col{
+            &-left{
+                @include set-background($about-s1__r2-col-left-bg-md);
+            }
+        }
+        &-s1__r3-col{
+            &-left{
+                @include set-background($about-s1__r3-col-left-bg-md);
+            }
+        }
+        &-s1__r4-col{
+            &-left{
+                @include set-background($about-s1__r4-col-left-bg-md);
+            }
+        }
+    }
+    .cosmetic{
+        &-s1{
+            @include set-background($cosmetic-s1-bg-md);
+        }
+    }
+    .diagnostic{
+        &-s1{
+            @include set-background($diagnostic-s1-bg-md);
+        }
+    }
     .index{
         &-s5__col{
             &-left{
@@ -146,13 +308,10 @@ body{
     .navbar{
         .nav{
             &-item{
-                &:hover{
+                &:hover, &.active{
                     background-color: $color-wht !important;
                     border-bottom: $nav-item-active-border-size $nav-item-active-border;
                     padding-bottom: 0px;
-                }
-                &.active{
-                    background-color: $color-wht;
                 }
                 cursor: pointer;
                 padding-bottom: $nav-item-active-border-size;
@@ -171,5 +330,68 @@ body{
             }
         }
         padding: 0px;
+    }
+    .prevention{
+        &-s1{
+            @include set-background($prevention-s1-bg-md);
+        }
+    }
+    .restorative{
+        &-s1{
+            @include set-background($restorative-s1-bg-md);
+        }
+    }
+    .sedative{
+        &-s1{
+            @include set-background($sedative-s1-bg-md);
+        }
+    }
+    .services{
+        &-s1{
+            @include set-background($services-s1-bg-md);
+        }
+    }
+    .surgical{
+        &-s1{
+            @include set-background($surgical-s1-bg-md);
+        }
+    }
+}
+
+@media all and (min-width: 992px){
+    .cosmetic{
+        &-s1{
+            @include set-background($cosmetic-s1-bg-lg);
+        }
+    }
+    .diagnostic{
+        &-s1{
+            @include set-background($diagnostic-s1-bg-lg);
+        }
+    }
+    .prevention{
+        &-s1{
+            @include set-background($prevention-s1-bg-lg);
+        }
+    }
+    .restorative{
+        &-s1{
+            @include set-background($restorative-s1-bg-lg);
+        }
+    }
+    .sedative{
+        &-s1{
+            @include set-background($sedative-s1-bg-lg);
+        }
+    }
+    .services{
+        &-s1{
+            @include set-background($services-s1-bg-lg);
+        }
+    }
+    .surgical{
+        &-s1{
+            @include set-background($surgical-s1-bg-lg);
+        }
     }
 }
