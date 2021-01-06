@@ -1,3 +1,72 @@
+<?php
+
+session_start();
+include_once "php/comm.php";
+include_once "php/db.php";
+include_once "php/t_newsletter.php";
+include_once "php/t_user.php";
+
+//check user login data
+if(isset($_POST["username"])
+&& isset($_POST["userpass"])){
+    DatabaseConnect();
+    $usr = new TUser($GLOBALS['connection']);   
+    $usr->getByName(htmlspecialchars($_POST["username"]));
+    if($usr->getData("username")===htmlspecialchars($_POST['username'])
+    && $usr->getData("password")===sha1(htmlspecialchars($_POST['userpass']))
+    ){
+        $_SESSION["UserLogged"] = $usr->getData("username");
+    }
+}
+
+if(!isset($_SESSION["UserLogged"])){
+    //reading view config
+    if(isset($_POST["login"])){
+        $_SESSION["view"] = "dashboard";
+    }
+    if(isset($_POST["newsletter"])){
+        $_SESSION["view"] = "newsletter";
+    }
+    if(isset($_POST["users"])){
+        $_SESSION["view"] = "users";
+    }
+    if(isset($_POST["edituser"])){
+        $_SESSION["view"] = "edituser";
+    }
+    if(isset($_POST["logout"])){
+        $_SESSION["view"] = "logout";
+    }
+    
+    //template selection and config
+    if(isset($_SESSION["view"])){
+        switch($_SESSION["view"]){
+            case "newsletter":
+                $_SESSION["viewTemplate"] = "templates/tmp_newsletter.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "users":
+                $_SESSION["viewTemplate"] = "templates/tmp_users.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "dashboard":
+                $_SESSION["viewTemplate"] = "templates/tmp_dashboard.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "edituser":
+                $_SESSION["viewTemplate"] = "templates/tmp_edituser.php";
+                break;
+            default: 
+                $_SESSION["viewTemplate"] = "templates/tmp_login.php";     
+                $_SESSION = array();
+                session_destroy(); 
+        }
+    }
+}
+else{
+    $_SESSION["viewTemplate"] = "templates/tmp_login.php";
+}
+
+?>
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
@@ -52,10 +121,29 @@
                 </ul>
             </div>
         </nav>
-        <section class="container user-s1 d-flex py-3">
-            <div class="my-auto text-center text-md-left px-md-5">               
+        <section class="container-fluid user-s1 p-0 m-0 d-flex">
+            <div class="text-center text-md-left w-100">
                 
-                <!-- Template area -->
+                <?php if(isset($_SESSION["UserLogged"])){ ?>
+                    <div class="row font-menu w-100 mx-0">                    
+                        <ul class="breadcrumb w-100">
+                            <li class="breadcrumb-item">
+                                <?php if(isset($_SESSION["UserLogged"])){echo $_SESSION["UserLogged"];} ?>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <?php if(isset($_SESSION["view"])){echo $_SESSION["view"];} ?>
+                            </li>
+                        </ul>
+                    </div>
+                    <?php 
+                        }
+                        if(isset($_SESSION["viewTemplate"])){
+                            include $_SESSION["viewTemplate"]; 
+                        }
+                        else{
+                            include "templates/tmp_login.php";                            
+                        }
+                ?>      
 
             </div>
         </section>
@@ -122,7 +210,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-0">
                     <small class="text-center text-md-left w-100">
-                        Website demo, Copyright &copy; 2019-2020
+                        Copyright &copy; 2019-2021 Tomasz Pankowski
                     </small>
                 </div>
             </div>

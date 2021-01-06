@@ -116,15 +116,15 @@
             </div>
             <div class="row mx-2 pt-1 border-top border-secondary">
                 <div class="col-12 col-md-6 order-0 order-md-1 text-center text-md-right">
-                        <a href="privacy.html"
-                            class="font-header text-green font-weight-bold">
-                            Privacy &amp; Cookies
-                        </a>
+                    <a href="privacy.html"
+                        class="font-header text-green font-weight-bold">
+                        Privacy &amp; Cookies
+                    </a>
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-0">
-                    <p class="text-center text-md-left w-100">
-                        Website demo, Copyright &copy; 2019
-                    </p>
+                    <small class="text-center text-md-left w-100">
+                        Copyright &copy; 2019-2021 Tomasz Pankowski
+                    </small>
                 </div>
             </div>
         </footer>

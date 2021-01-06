@@ -61,12 +61,14 @@ $section-full-height:
     "privacy-s1",
     "sedative-s1",
     "services-s1",
-    "surgical-s1";
-$section-half-height:
+    "surgical-s1",
+    "user-s1";
+$section-third-height:
     "index-s2",
     "index-s3",
-    "index-s5"
-    "index-s6";
+    "index-s5",
+    "index-s6",
+    "index-s7";
 $section-top-height:
     "error-s1",
     "index-s1",
@@ -83,3 +85,4 @@ $surgical-s1-bg-lg: "../img/surgical-s1/surgical-s1-bg-lg.jpg";
 $surgical-s1-bg-md: "../img/surgical-s1/surgical-s1-bg-md.jpg";
 $surgical-s1-bg-sm: "../img/surgical-s1/surgical-s1-bg-sm.jpg";
 $surgical-s1-bg-xs: "../img/surgical-s1/surgical-s1-bg-xs.jpg";
+$third-height: 33vh;
