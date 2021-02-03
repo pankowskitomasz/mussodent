@@ -2,7 +2,7 @@
     <div class="row w-100 my-auto mx-auto">
         <div class="col-10 col-sm-8 col-md-6 col-lg-4 offset-1 offset-sm-2 offset-md-3 offset-lg-4">
             <div class="card font-menu">
-                <div class="card-header">
+                <div class="card-header text-left">
                     Login
                 </div>
                 <div class="card-body">

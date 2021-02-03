@@ -1,0 +1,10 @@
+CREATE TABLE mussodent_messages(
+    id INT NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    message VARCHAR(150) NOT NULL,
+    time DATETIME DEFAULT CURRENT_TIMESTAMP, 
+    PRIMARY KEY(id)
+);
