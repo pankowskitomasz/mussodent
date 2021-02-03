@@ -32,13 +32,22 @@ else{
             <div class="col-12 col-sm-4 col-md-3 mb-3">
                 <div class="list-group">
                     <input class="list-group-item list-group-item-action"
-                        name="newsletter"
+                        name="dashboard"
                         type="submit"
-                        value="Newsletter">                        
-                    <input class="list-group-item list-group-item-action list-group-item-secondary"
+                        value="Dashboard">  
+                    <input class="list-group-item list-group-item-action"
+                        name="messages"
+                        type="submit"
+                        value="Messages">     
+                    <?php 
+                        if(isset($_SESSION["UserLogged"])
+                        && $_SESSION["UserLogged"]==="administrator"){
+                    ?>                      
+                    <input class="list-group-item list-group-item-action"
                         name="users"
                         type="submit"
-                        value="Users">                   
+                        value="Users">          
+                    <?php } ?>                 
                     <input class="list-group-item list-group-item-action"
                         name="logout"
                         type="submit"                                

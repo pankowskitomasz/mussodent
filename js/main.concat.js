@@ -73,7 +73,7 @@ function checkForm(){
 }
 
 function swapTarget(){
-    $("form").eq(0).attr("action","confirm.php");
+    $("form").eq(0).attr("action","message.php");
 }
 
 function setCookie(cname, cvalue, exdays) {
@@ -133,4 +133,6 @@ function pointsMap() {
 }
 
 gpdrDeclaration();
-setTimeout(swapTarget,11000);
+if(window.location.href.indexOf("contact")>0){
+    setTimeout(swapTarget,11000);
+}

@@ -6,7 +6,7 @@ class TUser{
     private $link;
 
     private function emailExists($emailA){
-        $sql = "select id from users where email=:umail";
+        $sql = "select id from ".DB_PREFIX."users where email=:umail";
         $stmt = $this->link->prepare($sql);
         $stmt->bindParam(":umail",$emailA);
         $stmt->execute();
@@ -14,7 +14,7 @@ class TUser{
     }
 
     private function usernameExists($nameA){
-        $sql = "select id from users where username=:uname";
+        $sql = "select id from ".DB_PREFIX."users where username=:uname";
         $stmt = $this->link->prepare($sql);
         $stmt->bindParam(":uname",$nameA);
         $stmt->execute();
@@ -34,7 +34,7 @@ class TUser{
     public function deleteUser($idA){
         if(isset($idA)
         && $this->getById($idA)){
-            $stmt = $this->link->prepare("delete from users where id=:uid");
+            $stmt = $this->link->prepare("delete from ".DB_PREFIX."users where id=:uid");
             $stmt->bindParam(":uid",$idA);
             return $stmt->execute();
         }
@@ -43,7 +43,7 @@ class TUser{
     public function getById($idA){
         if(isset($idA)
         && isset($this->link)){
-            $sql = "select * from users where id=:uid";
+            $sql = "select * from ".DB_PREFIX."users where id=:uid";
             $stmt = $this->link->prepare($sql);
             $stmt->bindParam(":uid",$idA);
             $stmt->execute();
@@ -68,7 +68,7 @@ class TUser{
     public function getByEmail($emailA){
         if(isset($emailA)
         && isset($this->link)){
-            $sql = "select * from users where email=:umail";
+            $sql = "select * from ".DB_PREFIX."users where email=:umail";
             $stmt = $this->link->prepare($sql);
             $stmt->bindParam(":umail",$emailA);
             $stmt->execute();
@@ -93,7 +93,7 @@ class TUser{
     public function getByName($nameA){
         if(isset($nameA)
         && isset($this->link)){
-            $sql = "select * from users where username=:uname";
+            $sql = "select * from ".DB_PREFIX."users where username=:uname";
             $stmt = $this->link->prepare($sql);
             $stmt->bindParam(":uname",$nameA);
             $stmt->execute();
@@ -126,14 +126,14 @@ class TUser{
 
     public function getList(){
         if(isset($this->link)){
-            $stmt = $this->link->prepare("select id,username,email from users");
+            $stmt = $this->link->prepare("select id,username,email from ".DB_PREFIX."users");
             $stmt->execute();
             return $stmt->fetchAll();
         }
     }
 
     public function getListLength(){
-        $stmt = $this->link->prepare("select count(*) from users");
+        $stmt = $this->link->prepare("select count(*) from ".DB_PREFIX."users");
         $stmt->execute();
         $res = $stmt->fetchAll();
         return $res[0][0];
@@ -146,10 +146,10 @@ class TUser{
     public function saveUser(){
         if($this->id){
             //update existing
-            $sql = "update users set ";
+            $sql = "update ".DB_PREFIX."users set ";
             $sql .= "username = :uname,";
             $sql .= "password = :upass,";
-            $sql .= "email = :umail,";
+            $sql .= "email = :umail ";
             $sql .= "where id=:uid";
             $stmt = $this->link->prepare($sql);
             $stmt->bindParam(":uname",$this->data['username']);
@@ -161,7 +161,7 @@ class TUser{
         else if(!$this->usernameExists($this->data['username'])
         && !$this->emailExists($this->data['email'])){
             //create new
-            $sql = "insert into users(username,password,email)";
+            $sql = "insert into ".DB_PREFIX."users(username,password,email)";
             $sql .= "values(:uname,:upass,:umail)";
             $stmt = $this->link->prepare($sql);
             $stmt->bindParam(":uname",$this->data['username']);

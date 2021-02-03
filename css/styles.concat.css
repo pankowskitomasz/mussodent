@@ -160,7 +160,7 @@ body, html {
 }
 
 /* line 8, ../sass/partials/_layout.scss */
-.section-top-fit, .error-s1, .index-s1, .user-s1 {
+.section-top-fit, .error-s1, .index-s1 {
   height: calc(50vh - 0px);
   height: -o-calc(50vh - 0px);
   height: -moz-calc(50vh - 0px);
@@ -214,11 +214,6 @@ body, html {
 
 /* line 29, ../sass/partials/_mixins.scss */
 .surgical-s1 {
-  min-height: 100vh;
-}
-
-/* line 29, ../sass/partials/_mixins.scss */
-.user-s1 {
   min-height: 100vh;
 }
 

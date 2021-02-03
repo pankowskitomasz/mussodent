@@ -8,9 +8,13 @@
             <div class="col-12 col-sm-4 col-md-3">
                 <div class="list-group">
                     <input class="list-group-item list-group-item-action"
-                        name="newsletter"
+                        name="dashboard"
                         type="submit"
-                        value="Newsletter">     
+                        value="Dashboard">  
+                    <input class="list-group-item list-group-item-action"
+                        name="messages"
+                        type="submit"
+                        value="Messages">     
                     <?php 
                         if(isset($_SESSION["UserLogged"])
                         && $_SESSION["UserLogged"]==="administrator"){

@@ -1,18 +1,18 @@
 <?php
 
 DatabaseConnect();
-$news = new TNewslettter($GLOBALS['connection'],'newsletter');
+$messages = new TMessage($GLOBALS['connection']);
 
-//check subscription related actions
-if(isset($_POST["unsubscribe"])){
-    $news->unsubscribe(htmlspecialchars($_POST["unsubscribe"]));
-}
-else if(isset($_POST["subscribe"]) && isset($_POST["subsemail"])
-|| (!empty($_POST["subsemail"]) && filter_var($_POST["subsemail"], FILTER_VALIDATE_EMAIL))){
-    $news->subscribe(htmlspecialchars($_POST["subsemail"]));
+if(isset($_POST["msgdelete"])){
+    $messages->deleteMessage(htmlspecialchars($_POST["msgdelete"]));
 }
 
-//handling newsletter list pagination
+if(isset($_POST["msearch"])){
+    $taggedRes = $messages->getByTag($_POST["msearch"]);
+}
+
+
+//handling messages list pagination
 if(!isset($_SESSION["CurrentPage"])){
     $_SESSION["CurrentPage"]=1;
 }
@@ -20,10 +20,18 @@ else{
     if(isset($_POST["prevpage"])
     && $_SESSION["CurrentPage"]>1){
         $_SESSION["CurrentPage"]--;
+    }    
+    if(isset($_POST["msearch"])){
+        if(isset($_POST["nextpage"])
+        && $_SESSION["CurrentPage"]<(ceil(count($taggedRes)/PAGE_SIZE))){
+            $_SESSION["CurrentPage"]++;
+        }
     }
-    if(isset($_POST["nextpage"])
-    && $_SESSION["CurrentPage"]<(ceil($news->getListLength()/PAGE_SIZE))){
-        $_SESSION["CurrentPage"]++;
+    else{
+        if(isset($_POST["nextpage"])
+        && $_SESSION["CurrentPage"]<(ceil($messages->getListLength()/PAGE_SIZE))){
+            $_SESSION["CurrentPage"]++;
+        }
     }
 }
 
@@ -36,10 +44,14 @@ else{
         <div class="row h-100">
             <div class="col-12 col-sm-4 col-md-3 mb-3">
                 <div class="list-group">
-                    <input class="list-group-item list-group-item-action list-group-item-secondary"
-                        name="newsletter"
+                    <input class="list-group-item list-group-item-action"
+                        name="dashboard"
                         type="submit"
-                        value="Newsletter">  
+                        value="Dashboard">  
+                    <input class="list-group-item list-group-item-action"
+                        name="messages"
+                        type="submit"
+                        value="Messages">     
                     <?php 
                         if(isset($_SESSION["UserLogged"])
                         && $_SESSION["UserLogged"]==="administrator"){
@@ -47,8 +59,8 @@ else{
                     <input class="list-group-item list-group-item-action"
                         name="users"
                         type="submit"
-                        value="Users">         
-                    <?php } ?>
+                        value="Users">          
+                    <?php } ?>                 
                     <input class="list-group-item list-group-item-action"
                         name="logout"
                         type="submit"                                
@@ -58,22 +70,29 @@ else{
             <div class="col-12 col-sm-8 col-md-9">
                 <div class="card w-100 mb-3">
                     <div class="card-body">
-                        <label class="">Add email address</label>
+                        <label class="">Find message</label>
                         <div class="input-group">
                             <input class="form-control text-center"
-                                name="subsemail"
+                                name="msearch"
                                 tabindex="1"
-                                type="email">
+                                type="text">
                             <div class="input-group-append">
                                 <button class="btn btn-outline-dark"
-                                    name="subscribe"
+                                    name="msgsearch"
                                     tabindex="2"
                                     type="submit">
-                                    Subscribe
+                                    Search
                                 </button>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="btn-group float-left mb-2">
+                    <button class="btn btn-sm btn-outline-secondary"
+                        name="messages"
+                        type="submit">
+                        Show All
+                    </button>
                 </div>
                 <div class="btn-group float-right mb-2">
                     <button class="btn btn-sm btn-outline-secondary"
@@ -83,10 +102,17 @@ else{
                     </button>
                     <button class="btn btn-sm btn-outline-secondary"                        
                         disabled>
-                        <?php 
-                            if(isset($_SESSION["CurrentPage"])){
-                                echo $_SESSION["CurrentPage"]." / ".ceil($news->getListLength()/PAGE_SIZE);
-                            } 
+                        <?php     
+                            if(isset($_POST["msearch"])){
+                                if(isset($_SESSION["CurrentPage"])){
+                                    echo $_SESSION["CurrentPage"]." / ".ceil(count($taggedRes)/PAGE_SIZE);
+                                } 
+                            }
+                            else{
+                                if(isset($_SESSION["CurrentPage"])){
+                                    echo $_SESSION["CurrentPage"]." / ".ceil($messages->getListLength()/PAGE_SIZE);
+                                }     
+                            }                            
                         ?>
                     </button>
                     <button class="btn btn-sm btn-outline-secondary"
@@ -101,18 +127,36 @@ else{
                             <thead class="thead-light">
                                 <tr>
                                     <th>ID</th>
-                                    <th colspan="2">Email</th>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                    $tab = $news->getList();
+                                    if(isset($_POST["msearch"])){
+                                        $tab = $taggedRes;
+                                    }
+                                    else{    
+                                        $tab = $messages->getList();
+                                    }
                                     $pstart = ($_SESSION["CurrentPage"]-1)*PAGE_SIZE;
                                     $pend = $pstart+(PAGE_SIZE);
                                     for($i=$pstart;$i<count($tab) && $i<$pend;$i++){
-                                        echo "<tr><td>".$tab[$i][0]."</td>".
-                                            "<td>".$tab[$i][1]."</td><td>".
-                                            "<button type='submit' name='unsubscribe' class='btn btn-sm btn-danger float-right' value='".$tab[$i][1]."'>Remove</button>".
+                                        echo "<tr>".
+                                            "<td>".$tab[$i]["id"]."</td>".
+                                            "<td>".ucwords($tab[$i]["firstname"])." ".
+                                            ucwords($tab[$i]["lastname"])."</td>".
+                                            "<td>".
+                                            substr($tab[$i]["time"],8,2).
+                                            "-".
+                                            substr($tab[$i]["time"],5,2).
+                                            "-".
+                                            substr($tab[$i]["time"],2,2).
+                                            "</td>".
+                                            "<td class='pl-0 pr-1'>".
+                                            "<button type='submit' name='msgdelete' class='btn btn-sm btn-secondary float-right' value='".$tab[$i][0]."'>X</button>".
+                                            "<button type='submit' name='msginfo' class='btn btn-sm btn-outline-secondary float-right px-3 mr-1' value='".$tab[$i][0]."'>i</button>".                                            
                                             "</td></tr>";
                                     }
                                 ?>    
@@ -130,7 +174,7 @@ else{
                         disabled>
                         <?php 
                             if(isset($_SESSION["CurrentPage"])){
-                                echo $_SESSION["CurrentPage"]." / ".ceil($news->getListLength()/PAGE_SIZE);
+                                echo $_SESSION["CurrentPage"]." / ".ceil($messages->getListLength()/PAGE_SIZE);
                             } 
                         ?>
                     </button>

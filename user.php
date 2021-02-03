@@ -1,12 +1,21 @@
 <?php
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();   
+}
+
 include_once "php/comm.php";
 include_once "php/db.php";
-include_once "php/t_newsletter.php";
+include_once "php/t_message.php";
 include_once "php/t_user.php";
 
-//check user login data
+//to remove before pub
+//include_once "php/support.php";
+//createAdminAccount("password","admin@mussodent.com","9731");
+
+//echo $_SESSION["viewTemplate"]."|".$_SESSION["view"];
+//print_r($_POST);
+
 if(isset($_POST["username"])
 && isset($_POST["userpass"])){
     DatabaseConnect();
@@ -19,19 +28,28 @@ if(isset($_POST["username"])
     }
 }
 
-if(!isset($_SESSION["UserLogged"])){
+if(isset($_SESSION["UserLogged"])){
     //reading view config
     if(isset($_POST["login"])){
         $_SESSION["view"] = "dashboard";
     }
-    if(isset($_POST["newsletter"])){
-        $_SESSION["view"] = "newsletter";
+    if(isset($_POST["dashboard"])){
+        $_SESSION["view"] = "dashboard";
+    }
+    if(isset($_POST["messages"])){
+        $_SESSION["view"] = "messages";
     }
     if(isset($_POST["users"])){
         $_SESSION["view"] = "users";
     }
     if(isset($_POST["edituser"])){
         $_SESSION["view"] = "edituser";
+    }
+    if(isset($_POST["msginfo"])){
+        $_SESSION["view"] = "msginfo";
+    }
+    if(isset($_POST["msgsearch"])){
+        $_SESSION["view"] = "msgsearch";
     }
     if(isset($_POST["logout"])){
         $_SESSION["view"] = "logout";
@@ -40,8 +58,8 @@ if(!isset($_SESSION["UserLogged"])){
     //template selection and config
     if(isset($_SESSION["view"])){
         switch($_SESSION["view"]){
-            case "newsletter":
-                $_SESSION["viewTemplate"] = "templates/tmp_newsletter.php";
+            case "messages":
+                $_SESSION["viewTemplate"] = "templates/tmp_messages.php";
                 $_SESSION["CurrentPage"]=1;
                 break;
             case "users":
@@ -50,6 +68,14 @@ if(!isset($_SESSION["UserLogged"])){
                 break;
             case "dashboard":
                 $_SESSION["viewTemplate"] = "templates/tmp_dashboard.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "msginfo":
+                $_SESSION["viewTemplate"] = "templates/tmp_message_info.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "msgsearch":
+                $_SESSION["viewTemplate"] = "templates/tmp_messages.php";
                 $_SESSION["CurrentPage"]=1;
                 break;
             case "edituser":
@@ -121,30 +147,32 @@ else{
                 </ul>
             </div>
         </nav>
-        <section class="container-fluid user-s1 p-0 m-0 d-flex">
+        <section class="container-fluid user-s1 p-0 m-0 d-flex min-vh-100">
             <div class="text-center text-md-left w-100">
-                
-                <?php if(isset($_SESSION["UserLogged"])){ ?>
-                    <div class="row font-menu w-100 mx-0">                    
-                        <ul class="breadcrumb w-100">
-                            <li class="breadcrumb-item">
-                                <?php if(isset($_SESSION["UserLogged"])){echo $_SESSION["UserLogged"];} ?>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <?php if(isset($_SESSION["view"])){echo $_SESSION["view"];} ?>
-                            </li>
-                        </ul>
+                <div class="row w-100 mx-0">
+                    <?php if(isset($_SESSION["UserLogged"])){ ?>
+                        <div class="col-12 font-menu w-100 mx-0 p-0">                    
+                            <ul class="breadcrumb w-100">
+                                <li class="breadcrumb-item">
+                                    <?php if(isset($_SESSION["UserLogged"])){echo $_SESSION["UserLogged"];} ?>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <?php if(isset($_SESSION["view"])){echo $_SESSION["view"];} ?>
+                                </li>
+                            </ul>
+                        </div>
+                    <?php } ?>
+                    <div class="col-12 font-menu w-100 mx-0 p-0 min-vh-50"> 
+                        <?php
+                            if(isset($_SESSION["viewTemplate"])){
+                                include $_SESSION["viewTemplate"]; 
+                            }
+                            else{
+                                include "templates/tmp_login.php";                            
+                            }
+                        ?>
                     </div>
-                    <?php 
-                        }
-                        if(isset($_SESSION["viewTemplate"])){
-                            include $_SESSION["viewTemplate"]; 
-                        }
-                        else{
-                            include "templates/tmp_login.php";                            
-                        }
-                ?>      
-
+                </div>
             </div>
         </section>
         <footer class="container-fluid border-top border-secondary bg-light shadow-lg px-3 pt-2">
@@ -208,8 +236,8 @@ else{
                         </a>
                     </small>  
                 </div>
-                <div class="col-12 col-md-6 order-1 order-md-0">
-                    <small class="text-center text-md-left w-100">
+                <div class="col-12 col-md-6 order-1 order-md-0 text-center text-md-left">
+                    <small class="w-100">
                         Copyright &copy; 2019-2021 Tomasz Pankowski
                     </small>
                 </div>

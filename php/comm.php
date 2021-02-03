@@ -1,11 +1,13 @@
 <?php
 
-define("DATABASE","mussodent");
+define("BASE_PATH","");
+define("DATABASE","demo");
+define("DB_PREFIX","mussodent_");
 define("ENV_PROD",false);
 define("HOST","localhost");
 define("PAGE_SIZE",20);
-define("PASSWORD","password");
-define("SUB_LIMIT",8);
+define("PASSWORD","P@ssword1");
+define("MSG_LIMIT",3);
 define("USER","root");
 //----------------------------------------------
 date_default_timezone_set("Europe/Warsaw");
