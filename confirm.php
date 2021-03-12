@@ -120,53 +120,47 @@
         <footer class="container-fluid border-top border-secondary bg-light shadow-lg px-3 pt-2">
             <div class="row text-center text-md-left py-2">
                 <div class="col-12 col-sm-6 col-md-4 pb-2">
-                    <small>
-                        <h4 class="font-weight-bold text-green h6">Contact</h4>
-                        <ul class="list-unstyled pl-3">
-                            <li class="pb-2">Tel.: 123 - 456 -678</li>
-                            <li class="pb-2">Fax: 123 - 456 -789</li>
-                            <li>Email: musso&#64;mail.com</li>
-                        </ul> 
-                    </small>                   
+                    <h4 class="font-weight-bold text-green h6"><small>Contact</small></h4>
+                    <ul class="list-unstyled pl-3">
+                        <li class="pb-2"><small>Tel.: 123 - 456 -678</small></li>
+                        <li class="pb-2"><small>Fax: 123 - 456 -789</small></li>
+                        <li><small>Email: musso&#64;mail.com</small></li>
+                    </ul>                     
                 </div>
                 <div class="col-12  col-sm-6 col-md-4 pb-2">
-                    <small>
-                        <h4 class="font-weight-bold text-green h6">Location</h4>
-                        <ul class="list-unstyled pl-3">
-                            <li class="pb-2">Kate Musso, DDS</li>
-                            <li class="pb-2">1234 Pine Str.</li>
-                            <li>Woodland, TX</li>
-                        </ul>
-                    </small>
+                    <h4 class="font-weight-bold text-green h6"><small>Location</small></h4>
+                    <ul class="list-unstyled pl-3">
+                        <li class="pb-2"><small>Kate Musso, DDS</small></li>
+                        <li class="pb-2"><small>1234 Pine Str.</small></li>
+                        <li><small>Woodland, TX</small></li>
+                    </ul>
                 </div>
                 <div class="col-12  col-sm-12 col-md-4 pb-2">
-                    <small>
-                        <h4 class="font-weight-bold text-green h6">Hours</h4>
-                        <div class="row">
-                            <div class="col-6 col-md-4 text-right">
-                                <ul class="list-unstyled">
-                                    <li>MON</li>
-                                    <li>TUE</li>
-                                    <li>WED</li>
-                                    <li>THU</li>
-                                    <li>FRI</li>
-                                    <li>SAT</li>
-                                    <li>SUN</li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-md-8 border-left border-green text-left ">
-                                <ul class="list-unstyled">
-                                    <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
-                                    <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
-                                    <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
-                                    <li>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></li>
-                                    <li>7:00 <sub>AM</sub> - 2:00 <sub>PM</sub></li>
-                                    <li>CLOSED</li>
-                                    <li>CLOSED</li>
-                                </ul>
-                            </div>
-                        </div>    
-                    </small>                
+                    <h4 class="font-weight-bold text-green h6"><small>Hours</small></h4>
+                    <div class="row">
+                        <div class="col-6 col-md-4 text-right">
+                            <ul class="list-unstyled">
+                                <li><small>MON</small></li>
+                                <li><small>TUE</small></li>
+                                <li><small>WED</small></li>
+                                <li><small>THU</small></li>
+                                <li><small>FRI</small></li>
+                                <li><small>SAT</small></li>
+                                <li><small>SUN</small></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-8 border-left border-green text-left ">
+                            <ul class="list-unstyled">
+                                <li><small>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></small></li>
+                                <li><small>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></small></li>
+                                <li><small>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></small></li>
+                                <li><small>7:00 <sub>AM</sub> - 5:00 <sub>PM</sub></small></li>
+                                <li><small>7:00 <sub>AM</sub> - 2:00 <sub>PM</sub></small></li>
+                                <li><small>CLOSED</small></li>
+                                <li><small>CLOSED</small></li>
+                            </ul>
+                        </div>
+                    </div>                        
                 </div>
             </div>
             <div class="row mx-2 border-top border-secondary">
@@ -185,45 +179,45 @@
                 </div>
             </div>
         </footer>
-    <div class="modal" id="privacyModal">
-        <div class="modal-dialog text-menu font-menu">
-            <div class="modal-content p-2">
-                <div class="modal-header text-center">
-                    <h4 class="font-logo text-muted">GPDR Declaration</h4>
-                    <a href="#privacyModal" 
-                        data-target="#privacyModal"
-                        data-dismiss="modal"
-                        class="close">
-                        &times;
-                    </a>
-                </div>
-                <div class="modal-body">
-                    <p class="initialism">
-                        This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
-                        in long term meaning (longer than needed for website operation during visitor's
-                        presence), any user (visitor) data.
-                    </p>
-                    <p class="initialism pt-2">
-                         All information collected during visitor's 
-                        presence on this website is used only for technical purposes, required for 
-                        correct operation of website or demonstration purposes related to technical 
-                        mechanisms and presentation of its operation... 
-                        <a href="privacy.html" class="text-secondary">More about privacy</a>
-                    </p>                        
-                    <p class="initialism pt-2">
-                        If you accept privacy policy please click button "accept". If you 
-                        refuse it, leave page by closing it in your web browser, please.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-outline-dark mx-auto"
-                        onclick="acceptPrivacyPolicy()">
-                        Accept
-                    </button>
+        <div class="modal" id="privacyModal">
+            <div class="modal-dialog text-menu font-menu">
+                <div class="modal-content p-2">
+                    <div class="modal-header text-center">
+                        <h4 class="font-logo text-muted">GPDR Declaration</h4>
+                        <a href="#privacyModal" 
+                            data-target="#privacyModal"
+                            data-dismiss="modal"
+                            class="close">
+                            &times;
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p class="initialism">
+                            This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
+                            in long term meaning (longer than needed for website operation during visitor's
+                            presence), any user (visitor) data.
+                        </p>
+                        <p class="initialism pt-2">
+                            All information collected during visitor's 
+                            presence on this website is used only for technical purposes, required for 
+                            correct operation of website or demonstration purposes related to technical 
+                            mechanisms and presentation of its operation... 
+                            <a href="privacy.html" class="text-secondary">More about privacy</a>
+                        </p>                        
+                        <p class="initialism pt-2">
+                            If you accept privacy policy please click button "accept". If you 
+                            refuse it, leave page by closing it in your web browser, please.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-dark mx-auto"
+                            onclick="acceptPrivacyPolicy()">
+                            Accept
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>    
-    <script type="text/javascript" src="js/main.min.js"></script>
+        </div> 
+    <script src="js/main.min.js"></script>
 </body>
 </html>
